@@ -14,7 +14,6 @@ const Page = React.forwardRef<HTMLDivElement, { image: string; number: number }>
           src={props.image}
           alt={`Page ${props.number}`}
           fill
-          style={{ objectFit: 'contain' }}
           priority={props.number <= 1} // Only prioritize the first couple of pages
           quality={85}
         />
