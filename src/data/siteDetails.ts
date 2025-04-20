@@ -1,8 +1,8 @@
 export const siteDetails = {
-    siteName: 'Finwise',
+    siteName: 'Vision Fever',
     siteUrl: 'https://finwise-omega.vercel.app/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
+        title: 'Vision Fever',
         description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
     },
     language: 'en-us',

@@ -7,22 +7,22 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: "Art and the artists different perspectives of seeing everything a new way. Lounge for all artists of all mediums.",
     quickLinks: [
         {
-            text: "Features",
-            url: "#features"
+            text: "Zines",
+            url: "/zines"
         },
         {
-            text: "Pricing",
-            url: "#pricing"
+            text: "About",
+            url: "/about"
         },
         {
-            text: "Testimonials",
-            url: "#testimonials"
+            text: "Contact",
+            url: "/contact"
         }
     ],
-    email: 'address@yoursite.com',
+    email: 'visionfeverteam@gmail.com',
     telephone: '+1 (123) 456-7890',
     socials: {
         // github: 'https://github.com',

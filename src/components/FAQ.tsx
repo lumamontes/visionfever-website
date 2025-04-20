@@ -1,6 +1,7 @@
 "use client"
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { Disclosure, DisclosureButton } from "@headlessui/react";
 import { BiMinus, BiPlus } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 import SectionTitle from "./SectionTitle";
 import { faqs } from "@/data/faq";
@@ -17,7 +18,7 @@ const FAQ: React.FC = () => {
                     <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
                         Ask us anything!
                     </p>
-                    <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">help@finwise.com</a>
+                    <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">visionfeverteam@gmail.com</a>
                 </div>
 
                 <div className="w-full lg:max-w-2xl mx-auto border-b">
@@ -30,9 +31,16 @@ const FAQ: React.FC = () => {
                                             <span className="text-2xl font-semibold">{faq.question}</span>
                                             {open ? <BiMinus className="w-5 h-5 text-secondary" /> : <BiPlus className="w-5 h-5 text-secondary" />}
                                         </DisclosureButton>
-                                        <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
-                                            {faq.answer}
-                                        </DisclosurePanel>
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            className="overflow-hidden"
+                                        >
+                                            <Disclosure.Panel className="px-4 pt-4 pb-2 text-foreground-accent">
+                                                {faq.answer}
+                                            </Disclosure.Panel>
+                                        </motion.div>
                                     </>
                                 )}
                             </Disclosure>

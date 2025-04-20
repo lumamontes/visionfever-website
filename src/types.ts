@@ -51,3 +51,13 @@ export interface ISocials {
     x?: string;
     [key: string]: string | undefined;
 }
+
+export interface IZine {
+    title: string;
+    slug: string;
+    description: string;
+    imageSrc: string;
+    link: string;
+    tags: string[];
+    pageCount: number;
+}

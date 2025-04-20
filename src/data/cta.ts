@@ -1,6 +1,5 @@
 export const ctaDetails = {
-    heading: 'Join Over 1 Million Users To Transform Your Finances',
-    subheading: 'Your journey to financial freedom starts here. Download Finwise today and take the first step towards a brighter financial future!',
-    appStoreUrl: '#',
-    googlePlayUrl: '#'
+    heading: 'Join Vision Fever and Help Us Create Amazing Events for Artists',
+    subheading: 'We’re looking for passionate individuals to join our team and collaborate on exciting events and activities for artists worldwide. No prior experience is required—just a willingness to learn and have fun!',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSezKkVh6lctgugSuW1iaXhy3Gvr5fzwPhIITsYpij2akYoBvA/viewform'
 }

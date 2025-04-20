@@ -1,25 +1,24 @@
 import { IFAQ } from "@/types";
-import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: 'What is Vision Fever?',
+        answer: 'Vision Fever is a creative platform celebrating art, culture, and unique perspectives through various mediums, including photography, videography, and more.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: 'How can I get featured on Vision Fever?',
+        answer: 'You can get featured by tagging us on Instagram @visionfever or submitting your work through our website. We’re always looking for fresh and inspiring content.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: 'What type of content does Vision Fever showcase?',
+        answer: 'We showcase a wide range of content, including photography, videography, fashion, music, literature, and other creative expressions that inspire and captivate.',
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: 'Is Vision Fever only for professional artists?',
+        answer: 'Not at all! Vision Fever is for everyone—whether you’re a professional artist or just starting your creative journey. We welcome all levels of talent and creativity.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: 'How can I stay updated with Vision Fever?',
+        answer: 'Follow us on Instagram @visionfever for the latest updates, features, and announcements.',
     }
 ];
