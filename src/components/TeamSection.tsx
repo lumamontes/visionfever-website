@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import clsx from "clsx";
 import { motion, Variants } from "framer-motion"
 
 import SectionTitle from "./SectionTitle";
@@ -11,7 +10,6 @@ interface Props {
         title: string;
         description: string;
     };
-    imageAtRight?: boolean; // Making this prop optional with ?
 }
 
 const containerVariants: Variants = {
@@ -48,7 +46,7 @@ export const childVariants = {
     },
 };
 
-const TeamSection: React.FC<Props> = ({ data, imageAtRight }) => {
+const TeamSection: React.FC<Props> = ({ data }) => {
     const { title, description } = data;
 
     return (

@@ -30,7 +30,7 @@ const MediumsSlider: React.FC = () => {
             <div className="text-center">
               {mediums.map(((medium, index) => {
                 return (
-                  <section>
+                  <section key={index}>
                     {medium}
                     {index < mediums.length && (
                       <div>

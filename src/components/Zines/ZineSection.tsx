@@ -6,7 +6,6 @@ import { motion, Variants } from "framer-motion"
 import SectionTitle from "../SectionTitle";
 import { IZine } from "@/types";
 import Link from "next/link";
-import AppStoreButton from "../AppStoreButton";
 
 interface Props {
     benefit: IZine;
@@ -48,7 +47,7 @@ export const childVariants = {
 };
 
 const ZineSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
-    const { title, description, imageSrc, link, slug, tags } = benefit;
+    const { title, description, imageSrc, link, slug } = benefit;
 
     return (
         <section className="benefit-section">

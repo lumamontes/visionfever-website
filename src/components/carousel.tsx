@@ -1,4 +1,3 @@
-import { GridTileImage } from "./grid/tile";
 import { RetroGrid } from "./retro-grid";
 
 interface IProduct {
@@ -12,6 +11,5 @@ export function BentoGrid({products}: {
 }) {
   if (!products?.length) return null;
   
-  // Instead of rendering the bento grid, render the retro grid
   return <RetroGrid products={products} />
 }

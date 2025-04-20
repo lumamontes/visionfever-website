@@ -12,7 +12,7 @@ export function RetroGrid({ products }: { products: IProduct[] }) {
   return (
     <div className="w-fullsm:p-6 md:p-8 rounded-lg shadow-md">
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
-        {products.map((product, i) => (
+        {products.map((product) => (
           <div
             key={product.key}
             className="aspect-square max-h-[200px] w-full rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
@@ -21,7 +21,6 @@ export function RetroGrid({ products }: { products: IProduct[] }) {
               label={{
                 title: product.title,
               }}
-              colorIndex={i}
             />
             {product.src && (
               <img

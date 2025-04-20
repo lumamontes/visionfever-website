@@ -1,5 +1,3 @@
-import Hero from "@/components/Hero";
-import Logos from "@/components/Logos";
 import Container from "@/components/Container";
 import Zines from "@/components/Zines/Zines";
 

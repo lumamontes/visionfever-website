@@ -3,15 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
-
 import { heroDetails } from '@/data/hero';
 import clsx from 'clsx';
 
 const bgColors = [
-    '#252525', // bg-hero-background
+    '#252525',
     // '#FEE0A2',
     // '#60BEFB',
     // '#E02432'
@@ -20,16 +16,7 @@ const bgColors = [
 const Hero: React.FC = () => {
     const [currentColorIndex, setCurrentColorIndex] = useState(0);
     
-    let a = [10, 20, 30, 40, 50];
-    let i = Math.floor(Math.random() * a.length);
-    let r = a[i];
-
     useEffect(() => {
-        // const interval = setInterval(() => {
-        //     setCurrentColorIndex((prevIndex) => (prevIndex + 1) % bgColors.length);
-        // }, 2000);
-        
-        // return () => clearInterval(interval);
         return () => setCurrentColorIndex(Math.floor(Math.random() * bgColors.length))
     }, []);
 

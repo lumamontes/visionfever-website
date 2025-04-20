@@ -3,8 +3,6 @@ import Image from "next/image";
 import clsx from "clsx";
 import { motion, Variants } from "framer-motion"
 
-import { IZine } from "@/types";
-import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 
 interface Props {
