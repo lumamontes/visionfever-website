@@ -1,15 +1,14 @@
 import Container from "@/components/Container";
 import Preview from "@/components/Preview/Preview";
 import { zines } from '@/data/zines';
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 
-// Generate dynamic metadata based on slug
 export async function generateMetadata({ 
   params 
 }: { 
   params: { slug: string } 
-}, parent: ResolvingMetadata): Promise<Metadata> {
+}): Promise<Metadata> {
   const zine = zines.find((zine) => zine.slug === params.slug);
   
   if (!zine) {
