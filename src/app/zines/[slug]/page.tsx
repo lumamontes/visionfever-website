@@ -1,5 +1,51 @@
 import Container from "@/components/Container";
 import Preview from "@/components/Preview/Preview";
+import { zines } from '@/data/zines';
+import { Metadata, ResolvingMetadata } from "next";
+
+
+// Generate dynamic metadata based on slug
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { slug: string } 
+}, parent: ResolvingMetadata): Promise<Metadata> {
+  const zine = zines.find((zine) => zine.slug === params.slug);
+  
+  if (!zine) {
+    return {
+      title: "Zines",
+      description: "Explore our collection of self-published zines.",
+    };
+  }
+
+  const ogImage = `/images/zines/${params.slug}.png`;
+
+  return {
+    title: `${zine.title} | Zines`,
+    description: zine.description || "Explore our collection of self-published zines.",
+    openGraph: {
+      title: zine.title,
+      description: zine.description,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `Cover of ${zine.title} zine`,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: zine.title,
+      description: zine.description,
+      images: [ogImage],
+    },
+  };
+}
+
 
 export default async function Page({
   params,
