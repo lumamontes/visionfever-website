@@ -12,9 +12,10 @@ const Page = React.forwardRef<HTMLDivElement, { image: string; number: number }>
       <div className={styles.pageContent}>
         <Image
           src={props.image}
+          className='object-contain w-full h-full'
           alt={`Page ${props.number}`}
           fill
-          priority={props.number <= 1} // Only prioritize the first couple of pages
+          priority={props.number <= 1} 
           quality={85}
         />
       </div>
@@ -30,6 +31,36 @@ export default function Preview({ slug }: { slug: string }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [pageImages, setPageImages] = useState<string[]>([]);
+  
+  const aspectRatio = 2550 / 1650;
+  const baseWidth = 550;
+  const calculatedHeight = Math.round(baseWidth * aspectRatio);
+  
+  const [isMobile, setIsMobile] = useState(false);
+  const [displayWidth, setDisplayWidth] = useState(baseWidth);
+  const [displayHeight, setDisplayHeight] = useState(calculatedHeight);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      
+      if (mobile) {
+        const mobileWidth = Math.min(window.innerWidth - 40, 400);
+        setDisplayWidth(mobileWidth);
+        setDisplayHeight(Math.round(mobileWidth * aspectRatio));
+      } else {
+        setDisplayWidth(baseWidth);
+        setDisplayHeight(calculatedHeight);
+      }
+    };
+    
+    checkMobile();
+    
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [aspectRatio, baseWidth, calculatedHeight]);
 
   useEffect(() => {
     const images = Array.from({ length: findZine?.pageCount ?? 10 }, (_, i) =>
@@ -51,12 +82,12 @@ export default function Preview({ slug }: { slug: string }) {
   return (
     <div className={styles.bookContainer}>
       <HTMLFlipBook
-          width={550}
-          height={733}
-          size="stretch"
-          minWidth={300}
+          width={displayWidth}
+          height={displayHeight}
+          size="fixed"
+          minWidth={200}
           maxWidth={1000}
-          minHeight={400}
+          minHeight={300}
           maxHeight={1533}
           maxShadowOpacity={0.5}
           showCover={true}
@@ -67,15 +98,16 @@ export default function Preview({ slug }: { slug: string }) {
           startPage={0}
           drawShadow={true}
           flippingTime={1000}
-          usePortrait={true}
+          usePortrait={isMobile}
           startZIndex={0}
-          autoSize={true}
+          autoSize={false}
           clickEventForward={true}
           useMouseEvents={true}
           swipeDistance={30}
           showPageCorners={true}
           disableFlipByClick={false}
-          className={''}
+          className={styles.flipBook}
+          ref={book}
         >
         {pageImages.map((image, index) => (
           <Page key={index} number={index} image={image} />
@@ -89,9 +121,6 @@ export default function Preview({ slug }: { slug: string }) {
         >
           Previous
         </button>
-        <span>
-          Page {currentPage + 1} of {totalPages}
-        </span>
         <button
           onClick={() => book.current?.pageFlip().flipNext()}
           disabled={currentPage === totalPages - 1}

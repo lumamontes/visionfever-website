@@ -32,7 +32,7 @@ export const zines: IZine[] = [
     {
       title: 'Who are you? Who am I? Who are we?',
       slug: 'who-are-you-who-am-i-who-are-we',
-      description: 'In this zine, artists create in monochromatic scheme for their chosen colors. Take a look inside this wonderland of colors and a variety of unique styles.',
+      description: 'A zine for artists with the theme "What represents you?" Open to interpretation, it is broader concept as an introduction or celebration of art and the artists.',
       imageSrc: '/images/zines/who-are-you-who-am-i-who-are-we.png',
       link: 'https://visionfever.bigcartel.com/product/waywaiwaw',
       tags: [
