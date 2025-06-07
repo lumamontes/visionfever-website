@@ -78,12 +78,12 @@ const ZineSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                             </p>
 
                             <div className="mt-5 flex flex-wrap items-center gap-5 justify-center lg:justify-start">
-                                <Link  href={`/zines/${slug}`}  rel="noopener noreferrer" className="p-2 text-sm font-semibold text-background bg-foreground rounded-full hover:bg-foreground/10 transition-colors">
-                                    Read Now  
+                                <Link  href={`/zines/${slug}`}  rel="noopener noreferrer" className="py-2 w-[100px] text-center text-sm font-semibold text-background bg-foreground rounded hover:bg-foreground/10 transition-colors">
+                                    Read  
                                 </Link>
                                     
-                                <Link  href={link} target="_blank" className="p-2 text-sm font-semibold text-background bg-foreground rounded-full hover:bg-secondary/10 transition-colors">
-                                    Buy Zine
+                                <Link  href={link} target="_blank" className="p-2 text-sm font-semibold text-center w-[100px] text-background bg-foreground rounded hover:bg-secondary/10 transition-colors">
+                                    Buy
                                 </Link>
                             </div>
                         </motion.div>

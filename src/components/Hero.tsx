@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { heroDetails } from '@/data/hero';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
     const gridPatternClass = "absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]";
@@ -35,7 +36,7 @@ const Hero: React.FC = () => {
                 />
                 <p className={`mt-4 text-foreground text-2xl max-w-lg mx-auto`}>{heroDetails.subheading}</p>
                 <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
-                    <a href={'#'}>
+                    <Link href={'/zines'}>
                     <button
                             type="button"
                             className={clsx("flex items-center justify-center min-w-[205px] mt-3 px-6 h-14 rounded-full w-full sm:w-fit", { "text-background bg-foreground": true, "text-foreground bg-background border border-foreground": !true })}
@@ -44,7 +45,7 @@ const Hero: React.FC = () => {
                             Explore
                         </div>
                         </button>
-                    </a>
+                    </Link>
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}
