@@ -50,7 +50,7 @@ const TeamSection: React.FC<Props> = ({ data }) => {
     const { title, description } = data;
 
     return (
-        <section className="py-16 lg:py-24">
+        <section className="lg:py-2">
             <motion.div
                 className="container mx-auto px-4 md:px-6"
                 variants={containerVariants}
@@ -79,10 +79,10 @@ const TeamSection: React.FC<Props> = ({ data }) => {
                     {team.map((member, index) => (
                         <motion.div 
                             key={member.name + index}
-                            className="flex flex-col items-center border border-hero-red dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                            className="flex flex-col items-center border border-hero-red dark:bg-background rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             variants={childVariants}
                         >
-                            <div className="w-full relative pb-[100%] mx-auto bg-white ">
+                            <div className="w-full relative pb-[100%] mx-auto bg-background ">
                                 <Image 
                                     src={member.avatar} 
                                     alt={`${member.name} - ${member.role}`}

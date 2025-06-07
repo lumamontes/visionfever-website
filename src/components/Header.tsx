@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     }, []);
 
     const VerticalSeparator = () => (
-        <div className="hidden md:block h-5 w-px mx-6 bg-gray-700 opacity-30"></div>
+        <div className="hidden md:block h-5 w-px mx-6 bg-foreground/30"></div>
     );
 
     return (
@@ -43,14 +43,14 @@ const Header: React.FC = () => {
                     max-w-screen-md mx-auto
                     rounded-full
                     transition-all duration-300
-                    ${scrolled ? 'bg-gray-900 bg-opacity-80' : 'bg-gray-900 bg-opacity-60'} 
+                    ${scrolled ? 'bg-background/80' : 'bg-background/60'} 
                     backdrop-blur-sm
-                    border border-gray-800
+                    border border-foreground/20
                 `}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <div className="w-6 h-6 relative">
-                            <div className="absolute inset-0 w-full h-full text-white">
+                            <div className="absolute inset-0 w-full h-full text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 1L15.5 8.5H8.5L12 1Z" fill="currentColor" />
                                     <path d="M12 23L8.5 15.5H15.5L12 23Z" fill="currentColor" />
@@ -71,8 +71,8 @@ const Header: React.FC = () => {
                                     href={item.url} 
                                     className={
                                             cn(
-                                                "text-gray-300 hover:text-white transition-colors text-base font-normal",
-                                                pathname === item.url ? "text-white" : "",
+                                                "text-foreground-accent hover:text-foreground transition-colors text-base font-normal",
+                                                pathname === item.url ? "text-foreground" : "",
                                             )
                                     }
                                 >
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="text-gray-300 hover:text-white focus:outline-none p-2 flex items-center justify-center transition-colors"
+                            className="text-foreground-accent hover:text-foreground focus:outline-none p-2 flex items-center justify-center transition-colors"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
@@ -112,13 +112,13 @@ const Header: React.FC = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
             >
-                <div id="mobile-menu" className="md:hidden bg-gray-900 bg-opacity-90 border-t border-gray-800 backdrop-blur-sm">
+                <div id="mobile-menu" className="md:hidden bg-background/90 border-t border-foreground/20 backdrop-blur-sm">
                     <ul className="flex flex-col space-y-3 pt-3 pb-4 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
                                 <Link 
                                     href={item.url} 
-                                    className="text-gray-300 hover:text-white block py-1.5 transition-colors" 
+                                    className="text-foreground-accent hover:text-foreground block py-1.5 transition-colors" 
                                     onClick={toggleMenu}
                                 >
                                     {item.text}

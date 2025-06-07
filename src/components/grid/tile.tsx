@@ -23,11 +23,11 @@ export function GridTileImage({
       {...props}
     >
       <div className="flex flex-row items-center gap-2">
-        <h3 className="font-extrabold text-xl text-white">
+        <h3 className="font-extrabold text-xl text-foreground">
           {label?.title}
         </h3>
-        <span className="text-white text-sm">✦</span>
-        <p className="text-sm text-white opacity-80">
+        <span className="text-foreground text-sm">✦</span>
+        <p className="text-sm text-foreground opacity-80">
           {label?.subtitle || ''}
         </p>
       </div>

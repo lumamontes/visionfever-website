@@ -1,38 +1,53 @@
 export const team = [
   {
     name: 'Sev',
-    role: 'Founder/Owner',
-    avatar: '/images/team/luana.png'
+    role: 'Founder',
+    avatar: '/images/team/sev.jpeg'
   },
   {
     name: 'Luana',
-    role: 'Founder/Owner',
-    avatar: '/images/team/luana.png'
+    role: 'Founder',
+    avatar: '/images/team/luana.jpeg'
 
   },
   {
-    name: 'Harlyn',
-    role: 'Video Editor',
-    avatar: '/images/team/luana.png'
+    name: 'Andrewmations',
+    role: 'Main Artist',
+    avatar: '/images/team/andrew.jpeg'
   },
   {
-    name: 'Reign',
+    name: 'Onifade',
+    role: 'Main Artist',
+    avatar: '/images/team/onifade.jpeg'
+  },
+  {
+    name: 'Meena',
     role: 'Graphic Designer',
-    avatar: '/images/team/luana.png'
+    avatar: '/images/team/meena.jpeg'
   },
   {
     name: 'Hales',
-    role: 'Social Media Manager',
-    avatar: '/images/team/luana.png'
+    role: 'Social Media Manager and 2d Animator',
+    avatar: '/images/team/hales.jpeg'
   },
   {
-    name: 'Jojo',
+    name: 'Jordan',
     role: 'Business',
-    avatar: '/images/team/luana.png'
+    avatar: '/images/team/jordan.jpeg'
+  },
+  {
+    name: 'Cave',
+    role: 'Business/Marketing',
+    avatar: '/images/team/kev.jpeg'
+  },
+  {
+    name: 'Krozah',
+    role: 'Video Editor',
+    avatar: '/images/team/krozah.jpeg'
   },
   {
     name: 'Hadean',
     role: 'Marketing - Project Manager',
-    avatar: '/images/team/luana.png'
+    avatar: '/images/team/hadean.jpeg'
   },
 ];

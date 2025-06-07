@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 :root {
+  --background: #faf3dc;
+  --foreground: #1a1a1a;
+  --primary: #FED835;
+  --secondary: #5c78ff;
+
+  --primary-accent: #e5c230;
+  --foreground-accent: #4a4a4a;
+  --hero-background: #f8f9fa;
+}
+
+.dark {
   --background: #1a1a1a;
   --foreground: #e0e0e0;
   --primary: #FED835;

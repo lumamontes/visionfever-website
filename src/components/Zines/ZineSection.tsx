@@ -78,11 +78,11 @@ const ZineSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                             </p>
 
                             <div className="mt-5 flex flex-wrap items-center gap-5 justify-center lg:justify-start">
-                                <Link  href={`/zines/${slug}`}  rel="noopener noreferrer" className="p-2 text-sm font-semibold text-gray-900 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white">
+                                <Link  href={`/zines/${slug}`}  rel="noopener noreferrer" className="p-2 text-sm font-semibold text-background bg-foreground rounded-full hover:bg-foreground/10 transition-colors">
                                     Read Now  
                                 </Link>
                                     
-                                <Link  href={link} target="_blank" className="p-2 text-sm font-semibold text-gray-900 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white">
+                                <Link  href={link} target="_blank" className="p-2 text-sm font-semibold text-background bg-foreground rounded-full hover:bg-secondary/10 transition-colors">
                                     Buy Zine
                                 </Link>
                             </div>

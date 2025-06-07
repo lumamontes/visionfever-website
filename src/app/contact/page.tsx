@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
     >
       <Container>
         <section id="contact" className="mt-10 mb-5 lg:my-20">
-          <div className="text-center text-white">
+          <div className="text-center text-foreground">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4">
               Get in Touch with Vision Fever
             </h2>
@@ -21,7 +21,7 @@ const ContactPage: React.FC = () => {
               >
                 Email us at visionfeverteam@gmail.com
               </a>
-              <span className="hidden sm:block text-gray-400">|</span>
+              <span className="hidden sm:block text-foreground-accent">|</span>
               <a
                 href="https://www.instagram.com/visionfever"
                 target="_blank"
